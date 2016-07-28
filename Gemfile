@@ -40,6 +40,8 @@ group(:integration) do
   gem "poise"
   gem "knife-windows"
   gem "foodcritic"
+  # Remove when https://github.com/poise/poise-boiler/pull/4 is merged
+  gem "poise-boiler", git: "https://github.com/jkeiser/poise-boiler.git", branch: "jk/foodcritic7"
 end
 
 group(:docgen) do
@@ -75,6 +77,8 @@ end
 
 group(:changelog) do
   gem "github_changelog_generator"
+  # Until https://github.com/piotrmurach/github/pull/274 is merged
+  gem "github_api", git: "https://github.com/jkeiser/github.git", branch: "pin-less"
 end
 
 group(:travis) do
