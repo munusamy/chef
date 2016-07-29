@@ -84,6 +84,8 @@ end
 group(:travis) do
   # See `bundler-audit` in .travis.yml
   gem "bundler-audit", git: "https://github.com/rubysec/bundler-audit.git"
+  # Until https://github.com/travis-ci/travis.rb/pull/426 is merged
+  gem "travis", git: "https://github.com/jkeiser/travis.rb", branch: "update-typheous"
 end
 
 instance_eval(ENV["GEMFILE_MOD"]) if ENV["GEMFILE_MOD"]
